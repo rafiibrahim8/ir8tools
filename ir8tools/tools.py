@@ -23,12 +23,12 @@ def main():
         parser.print_help()
         return
 
-    if(args.help and 'echoargs' in args.tool): # echoargs does not use argparse so printing help for it.
+    if(args.help and 'echoargs' == args.tool[-1]): # echoargs does not use argparse so printing help for it.
         print(echoparams_help())
         return
     
     if(args.help):
-        args.arg.append('--help')
+        args.tool.append('--help')
     
     run(args.tool)
 
