@@ -1,5 +1,6 @@
 from setuptools import setup,find_packages
 from ir8tools import __version__
+from ir8tools.tool_descriptions import get_tool_links
 
 def read_file(filename):
     try:
@@ -10,7 +11,6 @@ def read_file(filename):
 
 requirements = read_file('requirements.txt')
 long_description = read_file('README.md')
-tools = read_file('tool_descriptions.txt').strip().split()
 
 setup(
     name='ir8tools',
@@ -26,14 +26,14 @@ setup(
 
     install_requires=requirements,
 
-    description='Download files from google drive with resuming capability.',
+    description='A collection of scripts/tools.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     keywords=['scripts', 'tools'],
 
     packages=find_packages(),
     entry_points=dict(
-        console_scripts=tools
+        console_scripts=get_tool_links()
     ),
 
     platforms=['any'],

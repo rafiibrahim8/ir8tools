@@ -1,7 +1,0 @@
-ir8t=ir8tools.tools:main
-pwned=ir8tools.pwned:main
-ipinfo=ir8tools.ipinfo:main
-gittu=ir8tools.gittu:main
-echoargs=ir8tools.echoargs:main
-dnswho=ir8tools.dnswho:main
-dnsinfo=ir8tools.dnsinfo:main
