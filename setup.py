@@ -2,14 +2,16 @@ from setuptools import setup,find_packages
 from ir8tools import __version__
 from ir8tools.tool_descriptions import get_tool_links
 
-def read_file(filename):
+def read_file(filename,lines=False):
     try:
         with open(filename, encoding='utf-8') as f:
+            if(lines):
+                return [i.strip() for i in f.readlines() if(i.strip())]
             return f.read()
     except:
-        return []
+        return None
 
-requirements = read_file('requirements.txt')
+requirements = read_file('requirements.txt', lines=True)
 long_description = read_file('README.md')
 
 setup(
