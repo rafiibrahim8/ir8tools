@@ -4,11 +4,12 @@ from ir8tools.tool_descriptions import get_tool_links
 
 def read_file(filename,lines=False):
     try:
-        with open(filename, encoding='utf-8') as f:
+        with open(filename,'r', encoding='utf-8') as f:
             if(lines):
                 return [i.strip() for i in f.readlines() if(i.strip())]
             return f.read()
     except:
+        print('Can not read file:', filename)
         return None
 
 requirements = read_file('requirements.txt', lines=True)
