@@ -5,7 +5,8 @@ all_tools = [
     ('gittu','One command commit and push.', 'gittu=ir8tools.gittu:main'),
     ('echoargs','Echos args passed to it.','echoargs=ir8tools.echoargs:main'),
     ('dnswho','Who is your dns server.','dnswho=ir8tools.dnswho:main'),
-    ('dnsinfo','Show dns records of a domain.','dnsinfo=ir8tools.dnsinfo:main')
+    ('dnsinfo','Show dns records of a domain.','dnsinfo=ir8tools.dnsinfo:main'),
+    ('adata','Show airtel (Bangladesh) data balance from command line.','adata=ir8tools.automatify_tools.adata:main')
 ]
 
 def get_tool_links():
