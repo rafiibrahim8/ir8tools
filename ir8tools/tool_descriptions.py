@@ -6,7 +6,8 @@ all_tools = [
     ('echoargs','Echos args passed to it.','echoargs=ir8tools.echoargs:main'),
     ('dnswho','Who is your dns server.','dnswho=ir8tools.dnswho:main'),
     ('dnsinfo','Show dns records of a domain.','dnsinfo=ir8tools.dnsinfo:main'),
-    ('adata','Show airtel (Bangladesh) data balance from command line.','adata=ir8tools.automatify_tools.adata:main')
+    ('adata','Show airtel (Bangladesh) data balance from command line.','adata=ir8tools.automatify_tools.adata:main'),
+    ('srcf','Show alternative mirrors for SourceForge.net','srcf=ir8tools.srcf:main')
 ]
 
 def get_tool_links():
