@@ -6,15 +6,18 @@ from Crypto.Hash import SHA256
 from Crypto.Signature import PKCS1_v1_5
 from Crypto.PublicKey import RSA
 import os
+import time
 
 VERSION = '0.1'
 ADMIN=False
 
 def push_impl(type_, field=None, data=None, settings=None):
     body = {
+        'time': int(time.time()),
         'type': type_,
         'field': field,
-        'data': data
+        'data': data,
+        'random': b64encode(os.urandom(15)).decode('utf-8')
     }
 
     body = b64encode(json.dumps(body).encode('utf-8')).decode('utf-8')
@@ -30,8 +33,9 @@ def push_impl(type_, field=None, data=None, settings=None):
 
 def show_data():
     body = {
+        'time': int(time.time()),
         'service':'adata',
-        'random': b64encode(os.urandom(32)).decode('utf-8')
+        'random': b64encode(os.urandom(15)).decode('utf-8')
     }
     body = b64encode(json.dumps(body).encode('utf-8')).decode('utf-8')
     digest = SHA256.new(body.encode('utf-8'))

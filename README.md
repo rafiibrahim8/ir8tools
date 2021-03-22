@@ -15,6 +15,8 @@ You need to have python 3 installed.
   - **echoargs** - Echos args passed to this tool.
   - **dnswho** - Show information about your current dns server.
   - **dnsinfo** - Show different dns records.
+  - **adata** - Show airtel (Bangladesh) data balance from command line.
+  - **srcf** - Show alternative mirrors for SourceForge.net.
 
 # USES
 
