@@ -1,2 +1,2 @@
-__version__ = '0.1.3'
-VERSION_CODE = 1
+__version__ = "0.1.4"
+VERSION_CODE = 2
