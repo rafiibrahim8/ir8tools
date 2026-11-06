@@ -88,7 +88,7 @@ def _resolve_args(args):
     if args == "dns-types":
         from .dnsinfo import types
 
-        return ["ALL"] + [t.strip() for t in types]
+        return ["ALL"] + types
     return args
 
 
