@@ -16,6 +16,7 @@ all_tools = [
         "warpwg=ir8tools.warpwg:main",
     ),
     ("srcf", "Show alternative mirrors for SourceForge.net", "srcf=ir8tools.srcf:main"),
+    ("base58", "Base58 encode/decode, like base64.", "base58=ir8tools.base58:main"),
 ]
 
 

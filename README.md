@@ -17,6 +17,18 @@ pipx install git+https://github.com/rafiibrahim8/ir8tools.git
 # Upgrade later with: pipx install --force git+https://github.com/rafiibrahim8/ir8tools.git
 ```
 
+## Shell completion
+
+Completions are not installed automatically by `pip`/`pipx`. For fish, run once
+(and again after upgrading):
+
+```sh
+ir8t --completions fish > ~/.config/fish/conf.d/ir8tools.fish
+```
+
+This completes options for every tool, tool names after `ir8t`, and the chosen
+tool's options after `ir8t <tool>`.
+
 ## Usage
 
 Use the launcher to list or run tools:
@@ -40,6 +52,7 @@ Each tool can also be invoked directly by name, for example `ipinfo -h` or `warp
 - `gittu` – Commit and push changes to the current Git branch
 - `warpwg` – Generate a WireGuard config for Cloudflare WARP (file or QR)
 - `srcf` – Find alternate mirrors for SourceForge downloads
+- `base58` – Base58 encode/decode data (same flags as `base64`: `-d`, `-i`, `-w`)
 - `echoargs` – Echo the arguments passed (useful for testing)
 
 ## Dependencies
